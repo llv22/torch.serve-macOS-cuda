@@ -7,6 +7,14 @@ Requires python >= 3.8
 ```bash
 curl http://127.0.0.1:8080/predictions/bert -T input.txt
 ```
+
+## Torch.serve building for Orlando's macOS 10.13.6
+
+### Torch.serve on torch 2.0.0
+
+1. change frontend/gradle.properties to grpc_version=1.43.3 (> it will rely on macOS 10.15)
+2. disable cuda check in ts_scripts/install_dependencies.py
+
 ### 🚀 Quick start with TorchServe
 
 ```
