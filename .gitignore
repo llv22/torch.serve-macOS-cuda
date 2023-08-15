@@ -41,3 +41,9 @@ instances.yaml.backup
 ## Models
 *.pt
 *.onnx
+
+## model
+*.pth
+*.jpg
+*.mar
+*.log

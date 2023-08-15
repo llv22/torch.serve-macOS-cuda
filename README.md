@@ -14,6 +14,21 @@ curl http://127.0.0.1:8080/predictions/bert -T input.txt
 
 1. change frontend/gradle.properties to grpc_version=1.43.3 (> it will rely on macOS 10.15)
 2. disable cuda check in ts_scripts/install_dependencies.py
+3, build torch.serve
+
+```bash
+python setup.py bdist_wheel
+cd dist
+pip install torchserve-0.8.1-py3-none-any.whl
+cd torch-model
+python setup.py bdist_wheel
+cd dist
+pip install torch-model-archiver-0.8.1-py3-none-any.whl
+cd torch-workflow-archiver
+python setup.py bdist_wheel
+cd dist
+pip install torch-workflow-archiver-0.8.1-py3-none-any.whl
+```
 
 ### 🚀 Quick start with TorchServe
 
